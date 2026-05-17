@@ -116,7 +116,9 @@ Full ruleset in [`SKILL.md`](./SKILL.md).
 
 ## Architecture
 
-The skill's internal structure — workflow steps, output sections, rules, and cross-cutting concerns — is documented visually in [`docs/architecture.html`](./docs/architecture.html). Open in a browser to see how the 15 workflow steps map to the 12 output sections, which rules are gated to specific steps versus floating, and where the two structural gates (founder-fantasy audit and X/Y/Z entry justification) sit in the verdict flow.
+![idea-validator architecture diagram](./docs/architecture.svg)
+
+The skill's internal structure — workflow steps, output sections, rules, and cross-cutting concerns — is documented in the diagram above. It shows how the 15 workflow steps map to the 12 output sections, which rules are gated to specific steps versus floating, and where the two structural gates (founder-fantasy audit and X/Y/Z entry justification) sit in the verdict flow. A standalone HTML version with extra styling is at [`docs/architecture.html`](./docs/architecture.html).
 
 The diagram is the result of auditing the skill against itself: before any analysis is published, the skill must walk an explicit founder-fantasy audit (§10a) and fill in the X/Y/Z entry justification (§10b) for any "go" or "narrow" verdict. These two gates exist because of structural defects surfaced by the audit.
 
