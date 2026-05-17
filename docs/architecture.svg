@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 1400" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif, -apple-system, system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b91c1c"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1400" fill="#fafaf9"/>
+
+  <text x="600" y="30" text-anchor="middle" font-size="20" font-weight="600" fill="#0f172a">idea-validator — structural audit</text>
+  <text x="600" y="52" text-anchor="middle" font-size="13" fill="#64748b">What connects to what, where the gaps are, and which rules float</text>
+
+  <!-- LAYER 1: INPUT SCHEMA -->
+  <rect x="40" y="75" width="800" height="70" fill="#fff" stroke="#cbd5e1" stroke-width="1.5" rx="6"/>
+  <text x="60" y="100" font-size="13" font-weight="600" fill="#0f172a">INPUT SCHEMA</text>
+  <text x="60" y="120" font-size="11" fill="#475569">Required (5): one_line_summary · problem · target_users · geography · mode</text>
+  <text x="60" y="136" font-size="11" fill="#94a3b8">Optional: idea_name · proposed_solution · why_now · founder_context · founder_beliefs · sensitivity_flags · business_goal · constraints</text>
+
+  <line x1="440" y1="145" x2="440" y2="175" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 2: MODE DISPATCH -->
+  <rect x="40" y="175" width="800" height="70" fill="#fff" stroke="#cbd5e1" stroke-width="1.5" rx="6"/>
+  <text x="60" y="200" font-size="13" font-weight="600" fill="#0f172a">MODE DISPATCH</text>
+  <rect x="60" y="210" width="140" height="28" fill="#f1f5f9" stroke="#cbd5e1" rx="4"/>
+  <text x="130" y="229" text-anchor="middle" font-size="11" fill="#475569">quick_screen</text>
+  <rect x="210" y="210" width="170" height="28" fill="#dbeafe" stroke="#3b82f6" rx="4"/>
+  <text x="295" y="229" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">full_validation ★</text>
+  <rect x="390" y="210" width="160" height="28" fill="#f1f5f9" stroke="#cbd5e1" rx="4"/>
+  <text x="470" y="229" text-anchor="middle" font-size="11" fill="#475569">validation_plan</text>
+  <rect x="560" y="210" width="160" height="28" fill="#f1f5f9" stroke="#cbd5e1" rx="4"/>
+  <text x="640" y="229" text-anchor="middle" font-size="11" fill="#475569">investor_memo</text>
+
+  <line x1="295" y1="245" x2="295" y2="275" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 3: WORKFLOW (left col) and OUTPUT (right col) -->
+  <text x="160" y="270" font-size="13" font-weight="600" fill="#0f172a">WORKFLOW (15 steps, full_validation)</text>
+  <text x="650" y="270" font-size="13" font-weight="600" fill="#0f172a">OUTPUT STRUCTURE (12 sections)</text>
+
+  <!-- PHASE: FRAME -->
+  <rect x="40" y="285" width="380" height="80" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="60" y="305" font-size="11" font-weight="600" fill="#0891b2">FRAME</text>
+  <text x="60" y="325" font-size="11" fill="#334155">1. Restate the idea (founder's + sharpest + gap)</text>
+  <text x="60" y="341" font-size="11" fill="#334155">2. Reality check (search competitors)</text>
+  <text x="60" y="357" font-size="10" fill="#94a3b8" font-style="italic">  → triggers Rule 14 (use search)</text>
+
+  <rect x="500" y="285" width="380" height="80" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="520" y="305" font-size="11" font-weight="600" fill="#0891b2">FRAME OUTPUT</text>
+  <text x="520" y="325" font-size="11" fill="#334155">§1 Restated idea</text>
+  <text x="520" y="341" font-size="11" fill="#334155">§2 Reality check</text>
+
+  <line x1="420" y1="325" x2="500" y2="325" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="420" y1="341" x2="500" y2="341" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- PHASE: DIAGNOSE -->
+  <rect x="40" y="375" width="380" height="100" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="60" y="395" font-size="11" font-weight="600" fill="#0891b2">DIAGNOSE</text>
+  <text x="60" y="415" font-size="11" fill="#334155">3. Pressure-test problem (frequency, intensity)</text>
+  <text x="60" y="431" font-size="11" fill="#334155">4. Rank segments (5-axis score)</text>
+  <text x="60" y="447" font-size="11" fill="#334155">5. Pressure-test solution (lighter form?)</text>
+  <text x="60" y="466" font-size="10" fill="#b91c1c" font-style="italic">⚠ Steps 3 &amp; 5 have no dedicated output section</text>
+
+  <rect x="500" y="375" width="380" height="100" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="520" y="395" font-size="11" font-weight="600" fill="#0891b2">DIAGNOSE OUTPUT</text>
+  <text x="520" y="415" font-size="11" fill="#334155">§3 Segment ranking (beachhead + 2nd)</text>
+  <text x="520" y="435" font-size="10" fill="#94a3b8" font-style="italic">(steps 3, 5 fold into §3, §4 — no own section)</text>
+
+  <line x1="420" y1="431" x2="500" y2="415" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- PHASE: DEFINE -->
+  <rect x="40" y="485" width="380" height="80" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="60" y="505" font-size="11" font-weight="600" fill="#0891b2">DEFINE</text>
+  <text x="60" y="525" font-size="11" fill="#334155">6. Narrowest credible MVP (in/NOT-in v1)</text>
+  <text x="60" y="541" font-size="11" fill="#334155">7. Trust / privacy / regulatory posture</text>
+  <text x="60" y="557" font-size="10" fill="#94a3b8" font-style="italic">  → triggers Rules 3, 5, 12, 13</text>
+
+  <rect x="500" y="485" width="380" height="80" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="520" y="505" font-size="11" font-weight="600" fill="#0891b2">DEFINE OUTPUT</text>
+  <text x="520" y="525" font-size="11" fill="#334155">§4 MVP (in v1, NOT in v1, distractions)</text>
+  <text x="520" y="541" font-size="11" fill="#334155">§5 Trust / regulatory posture</text>
+
+  <line x1="420" y1="525" x2="500" y2="525" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="420" y1="541" x2="500" y2="541" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- PHASE: ASSESS -->
+  <rect x="40" y="575" width="380" height="110" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="60" y="595" font-size="11" font-weight="600" fill="#0891b2">ASSESS</text>
+  <text x="60" y="615" font-size="11" fill="#334155">8. Business model (rank 4–8 paths)</text>
+  <text x="60" y="631" font-size="11" fill="#334155">9. Retention &amp; defensibility</text>
+  <text x="60" y="647" font-size="11" fill="#334155">10. Map competition (two-question X/Y/Z) ★</text>
+  <text x="60" y="666" font-size="10" fill="#b91c1c" font-style="italic">⚠ Step 10 splits across §7 + §10 — no own home</text>
+
+  <rect x="500" y="575" width="380" height="110" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="520" y="595" font-size="11" font-weight="600" fill="#0891b2">ASSESS OUTPUT</text>
+  <text x="520" y="615" font-size="11" fill="#334155">§6 Business model (with realistic shape)</text>
+  <text x="520" y="631" font-size="11" fill="#334155">§7 Retention + death scenario</text>
+  <text x="520" y="651" font-size="10" fill="#b91c1c" font-style="italic">(competition mapping wedged in here)</text>
+
+  <line x1="420" y1="615" x2="500" y2="615" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="420" y1="631" x2="500" y2="631" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="420" y1="647" x2="500" y2="651" stroke="#b91c1c" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow-red)"/>
+
+  <!-- PHASE: DECIDE -->
+  <rect x="40" y="695" width="380" height="100" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="60" y="715" font-size="11" font-weight="600" fill="#0891b2">DECIDE</text>
+  <text x="60" y="735" font-size="11" fill="#334155">11. Top 5 risks (prob × damage)</text>
+  <text x="60" y="751" font-size="11" fill="#334155">12. Validation plan (sequenced tests)</text>
+  <text x="60" y="767" font-size="11" fill="#334155">13. Audit founder-fantasy patterns (NEW gate)</text>
+  <text x="60" y="783" font-size="11" fill="#334155">14. Verdict + X/Y/Z entry test</text>
+
+  <rect x="500" y="695" width="380" height="100" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="520" y="715" font-size="11" font-weight="600" fill="#0891b2">DECIDE OUTPUT</text>
+  <text x="520" y="735" font-size="11" fill="#334155">§8 Top 5 risks (ranked)</text>
+  <text x="520" y="751" font-size="11" fill="#334155">§9 Validation plan</text>
+  <text x="520" y="767" font-size="11" fill="#334155">§10 Verdict (10a audit + 10b X/Y/Z + 10c line)</text>
+
+  <line x1="420" y1="735" x2="500" y2="735" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="420" y1="751" x2="500" y2="751" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="420" y1="767" x2="500" y2="767" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="420" y1="783" x2="500" y2="767" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- PHASE: CLOSE -->
+  <rect x="40" y="805" width="380" height="60" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="60" y="825" font-size="11" font-weight="600" fill="#0891b2">CLOSE</text>
+  <text x="60" y="845" font-size="11" fill="#334155">15. Final synthesis</text>
+
+  <rect x="500" y="805" width="380" height="60" fill="#fff" stroke="#cbd5e1" stroke-width="1" rx="4"/>
+  <text x="520" y="825" font-size="11" font-weight="600" fill="#0891b2">CLOSE OUTPUT</text>
+  <text x="520" y="843" font-size="11" fill="#334155">§11 Sharpest version  ·  §12 Kill signal</text>
+
+  <line x1="420" y1="845" x2="500" y2="843" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- CROSS-CUTTING -->
+  <text x="160" y="905" font-size="13" font-weight="600" fill="#0f172a">CROSS-CUTTING CONCERNS (always active, weakly gated)</text>
+
+  <rect x="40" y="920" width="280" height="200" fill="#fff8f1" stroke="#fb923c" stroke-width="1" rx="4"/>
+  <text x="60" y="940" font-size="11" font-weight="600" fill="#9a3412">16 Non-negotiable rules</text>
+  <text x="60" y="960" font-size="10" fill="#475569">Gated (have a workflow step):</text>
+  <text x="60" y="975" font-size="10" fill="#16a34a">✓ Rules 3, 12, 13, 14, 15, 16</text>
+  <text x="60" y="995" font-size="10" fill="#475569">Partially gated:</text>
+  <text x="60" y="1010" font-size="10" fill="#ca8a04">~ Rules 4, 5, 6, 7, 8</text>
+  <text x="60" y="1030" font-size="10" fill="#475569">Floating (no enforcement step):</text>
+  <text x="60" y="1045" font-size="10" fill="#b91c1c">✗ Rule 1 (strong AND weak)</text>
+  <text x="60" y="1060" font-size="10" fill="#b91c1c">✗ Rule 2 (product vs business)</text>
+  <text x="60" y="1075" font-size="10" fill="#b91c1c">✗ Rule 9 (no generic advice)</text>
+  <text x="60" y="1090" font-size="10" fill="#b91c1c">✗ Rule 10 (no flattery)</text>
+  <text x="60" y="1105" font-size="10" fill="#b91c1c">✗ Rule 11 (call out fantasy)</text>
+
+  <rect x="340" y="920" width="280" height="200" fill="#fff8f1" stroke="#fb923c" stroke-width="1" rx="4"/>
+  <text x="360" y="940" font-size="11" font-weight="600" fill="#9a3412">12 Founder-fantasy patterns</text>
+  <text x="360" y="960" font-size="10" fill="#16a34a">✓ Now gated via Step 13 (audit)</text>
+  <text x="360" y="975" font-size="10" fill="#16a34a">✓ Surfaced in §10a output</text>
+  <text x="360" y="995" font-size="10" fill="#475569">Implicit step-binding (informational):</text>
+  <text x="360" y="1010" font-size="10" fill="#334155">  · platform-language → Step 6 (MVP)</text>
+  <text x="360" y="1025" font-size="10" fill="#334155">  · venture overreach → Step 8 (Biz model)</text>
+  <text x="360" y="1040" font-size="10" fill="#334155">  · competitor-as-validation → Step 10</text>
+  <text x="360" y="1055" font-size="10" fill="#334155">  · privacy/trust intuition → Step 7</text>
+  <text x="360" y="1070" font-size="10" fill="#334155">  · "second movers win" → Step 10</text>
+  <text x="360" y="1085" font-size="10" fill="#334155">  · "alongside my day job" → Step 12</text>
+  <text x="360" y="1105" font-size="10" fill="#16a34a">Resolved by v1.0 structured audit.</text>
+
+  <rect x="640" y="920" width="240" height="200" fill="#fff8f1" stroke="#fb923c" stroke-width="1" rx="4"/>
+  <text x="660" y="940" font-size="11" font-weight="600" fill="#9a3412">Style + Verdict vocab</text>
+  <text x="660" y="960" font-size="10" fill="#475569">Style: direct, no hype, no clichés.</text>
+  <text x="660" y="975" font-size="10" fill="#94a3b8">  (enforcement: vibes-based)</text>
+  <text x="660" y="1000" font-size="10" fill="#475569">Verdicts:</text>
+  <text x="660" y="1015" font-size="10" fill="#16a34a">  · go (requires X/Y/Z)</text>
+  <text x="660" y="1030" font-size="10" fill="#16a34a">  · narrow (requires X/Y/Z)</text>
+  <text x="660" y="1045" font-size="10" fill="#ca8a04">  · pivot (specify the pivot)</text>
+  <text x="660" y="1060" font-size="10" fill="#b91c1c">  · kill (no softening)</text>
+  <text x="660" y="1080" font-size="10" fill="#475569">Enforcement: Rule 16 ties to §10b.</text>
+  <text x="660" y="1100" font-size="10" fill="#16a34a">✓ Most explicit gate in skill.</text>
+
+  <!-- X/Y/Z TEST PANEL -->
+  <rect x="900" y="285" width="270" height="835" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" rx="6"/>
+  <text x="920" y="310" font-size="12" font-weight="600" fill="#1e3a8a">X/Y/Z ENTRY TEST</text>
+  <text x="920" y="328" font-size="10" fill="#1e40af">The cross-cutting structural gate</text>
+
+  <text x="920" y="355" font-size="10" fill="#334155" font-weight="600">Referenced in 6 places:</text>
+  <text x="920" y="373" font-size="10" fill="#1e40af">• Step 2 (Reality check)</text>
+  <text x="920" y="389" font-size="10" fill="#1e40af">• Step 10 (Map competition)</text>
+  <text x="920" y="405" font-size="10" fill="#1e40af">• Step 14 (Verdict)</text>
+  <text x="920" y="421" font-size="10" fill="#1e40af">• Rules 15-16</text>
+  <text x="920" y="437" font-size="10" fill="#1e40af">• Section "Competitor analysis"</text>
+  <text x="920" y="453" font-size="10" fill="#1e40af">• Verdict vocab + §10b output</text>
+
+  <text x="920" y="485" font-size="10" fill="#334155" font-weight="600">The test:</text>
+  <text x="920" y="503" font-size="9" fill="#475569">"[Incumbent X] cannot do [Y]</text>
+  <text x="920" y="517" font-size="9" fill="#475569">because [Y requires Z],</text>
+  <text x="920" y="531" font-size="9" fill="#475569">and [Z is something I can build</text>
+  <text x="920" y="545" font-size="9" fill="#475569">/ be / access that they</text>
+  <text x="920" y="559" font-size="9" fill="#475569">structurally cannot]."</text>
+
+  <text x="920" y="590" font-size="10" fill="#334155" font-weight="600">Enforcement strength:</text>
+  <text x="920" y="608" font-size="10" fill="#16a34a">✓ Strongest gate in the skill</text>
+  <text x="920" y="624" font-size="10" fill="#16a34a">✓ Most-bound concept (6 refs)</text>
+  <text x="920" y="640" font-size="10" fill="#16a34a">✓ §10b forces literal X/Y/Z fill-in</text>
+  <text x="920" y="656" font-size="10" fill="#ca8a04">~ Still self-checked by model</text>
+
+  <text x="920" y="685" font-size="10" fill="#334155" font-weight="600">Coverage check:</text>
+  <text x="920" y="703" font-size="10" fill="#16a34a">✓ Demand-validation question</text>
+  <text x="920" y="719" font-size="10" fill="#16a34a">✓ Entry-justification question</text>
+  <text x="920" y="735" font-size="10" fill="#16a34a">✓ Second-mover conditional logic</text>
+  <text x="920" y="751" font-size="10" fill="#16a34a">✓ Verdict downgrade if X/Y/Z missing</text>
+
+  <text x="920" y="780" font-size="10" fill="#334155" font-weight="600">v1.0 status:</text>
+  <text x="920" y="798" font-size="9" fill="#475569">Structured §10 output now requires</text>
+  <text x="920" y="812" font-size="9" fill="#475569">literal X/Y/Z fill-in before "go"</text>
+  <text x="920" y="826" font-size="9" fill="#475569">or "narrow" can be stated. Model</text>
+  <text x="920" y="840" font-size="9" fill="#475569">cannot silently skip the gate.</text>
+
+  <!-- PROBLEMS / RESOLUTIONS PANEL -->
+  <rect x="40" y="1140" width="1130" height="240" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" rx="6"/>
+  <text x="60" y="1165" font-size="13" font-weight="600" fill="#166534">STRUCTURAL DEFECTS — RESOLVED IN v1.0</text>
+
+  <text x="60" y="1190" font-size="11" font-weight="600" fill="#15803d">1. Step 10 (Map competition) was homeless. ✓ Resolved.</text>
+  <text x="60" y="1205" font-size="10" fill="#475569">§10b now provides explicit X/Y/Z fields. Competition mapping has a structured output home.</text>
+
+  <text x="60" y="1230" font-size="11" font-weight="600" fill="#15803d">2. All 12 founder-fantasy patterns were ungated. ✓ Resolved.</text>
+  <text x="60" y="1245" font-size="10" fill="#475569">Step 13 + §10a now require an explicit audit walk of all 12 patterns before the verdict.</text>
+
+  <text x="60" y="1270" font-size="11" font-weight="600" fill="#ca8a04">3. Five rules (1, 2, 9, 10, 11) still float without enforcement gates. Acceptable.</text>
+  <text x="60" y="1285" font-size="10" fill="#475569">These are tonal/stance rules; binding to a step would be artificial. Trade-off accepted.</text>
+
+  <text x="60" y="1310" font-size="11" font-weight="600" fill="#ca8a04">4. The X/Y/Z test still relies on model self-check at the gate. Acceptable.</text>
+  <text x="60" y="1325" font-size="10" fill="#475569">No external validator exists for a single-pass skill. §10b's structured fill-in is the strongest gate available.</text>
+
+  <text x="60" y="1355" font-size="11" font-style="italic" fill="#166534">Two real defects fixed. Two known limitations accepted with reasoning. v1.0 architecturally clean.</text>
+</svg>
