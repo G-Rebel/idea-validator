@@ -1,6 +1,6 @@
 # idea-validator
 
-A Claude skill for stress-testing startup, product, app, and feature ideas — without flattery, generic advice, or polite hedging.
+A Claude skill for stress-testing startup, product, app, and feature ideas - without flattery, generic advice, or polite hedging.
 
 ## What it does
 
@@ -77,9 +77,9 @@ problem: [what pain exists, for whom]
 proposed_solution: [what the product does]
 target_users: [primary segment hypothesis]
 geography: [launch market(s)]
-why_now: [timing thesis — optional]
-founder_context: [background, team, prior work — optional]
-founder_beliefs: [stated convictions to be tested — optional]
+why_now: [timing thesis - optional]
+founder_context: [background, team, prior work - optional]
+founder_beliefs: [stated convictions to be tested - optional]
 sensitivity_flags: [health, finance, kids, privacy, AI, regulated industry, etc.]
 business_goal: [lifestyle | bootstrapped | venture | acquisition | not_yet_decided]
 constraints: [time available, capital, team size, day-job conflicts]
@@ -99,11 +99,11 @@ The skill enforces these rules in every response:
 4. Always define what is explicitly NOT in v1.
 5. Always rank top assumptions by risk (probability × damage).
 6. Always recommend the narrowest credible wedge, even if the founder wants a platform.
-7. Always define a kill signal — concrete, observable, falsifiable.
+7. Always define a kill signal - concrete, observable, falsifiable.
 8. Never assume venture-scale potential unless the unit economics support it.
 9. Never give generic startup advice. Every recommendation must be specific to this idea.
 10. Never flatter, congratulate, or use the word "exciting" about an idea.
-11. **Always apply the two-question competitor test:** (1) does demand exist, (2) is the founder's entry justified. Never conflate them — competitors validate demand, not your entry. A "go" or "narrow" verdict requires the founder to name a specific structural advantage that incumbents cannot match.
+11. **Always apply the two-question competitor test:** (1) does demand exist, (2) is the founder's entry justified. Never conflate them - competitors validate demand, not your entry. A "go" or "narrow" verdict requires the founder to name a specific structural advantage that incumbents cannot match.
 
 Full ruleset in [`SKILL.md`](./SKILL.md).
 
@@ -118,13 +118,13 @@ Full ruleset in [`SKILL.md`](./SKILL.md).
 
 ![idea-validator architecture diagram](./docs/architecture.svg)
 
-The skill's internal structure — workflow steps, output sections, rules, and cross-cutting concerns — is documented in the diagram above. It shows how the 15 workflow steps map to the 12 output sections, which rules are gated to specific steps versus floating, and where the two structural gates (founder-fantasy audit and X/Y/Z entry justification) sit in the verdict flow. A standalone HTML version with extra styling is at [`docs/architecture.html`](./docs/architecture.html).
+The skill's internal structure - workflow steps, output sections, rules, and cross-cutting concerns - is documented in the diagram above. It shows how the 15 workflow steps map to the 12 output sections, which rules are gated to specific steps versus floating, and where the two structural gates (founder-fantasy audit and X/Y/Z entry justification) sit in the verdict flow. A standalone HTML version with extra styling is at [`docs/architecture.html`](./docs/architecture.html).
 
 The diagram is the result of auditing the skill against itself: before any analysis is published, the skill must walk an explicit founder-fantasy audit (§10a) and fill in the X/Y/Z entry justification (§10b) for any "go" or "narrow" verdict. These two gates exist because of structural defects surfaced by the audit.
 
 ## Tested
 
-This skill has been used to evaluate several real ideas across consumer health, family/kids tech, and travel categories. In each case it converged on the same verdict the founder reached after weeks of independent thinking — usually in one pass and within ~10 minutes of reading.
+This skill has been used to evaluate several real ideas across consumer health, family/kids tech, and travel categories. In each case it converged on the same verdict the founder reached after weeks of independent thinking - usually in one pass and within ~10 minutes of reading.
 
 The most useful evaluation metric: does the skill kill ideas you wanted it to validate? If it kills nothing, it's too soft. If it kills everything, it's broken. A roughly 1-in-3 survival rate across genuinely considered ideas is the target.
 
@@ -134,4 +134,4 @@ Open an issue with a concrete example where the skill softened, hedged, gave gen
 
 ## License
 
-MIT — see [`LICENSE`](./LICENSE).
+MIT - see [`LICENSE`](./LICENSE).
